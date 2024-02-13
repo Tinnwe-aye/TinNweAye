@@ -259,4 +259,27 @@
    */
   new PureCounter();
 
+  
+  document.getElementById("downloadButton").onclick = function() {
+      // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
+      var pdfUrl = 'assets/resume/TinNweAyeResume.pdf';
+      
+      // Create an anchor element
+      var link = document.createElement('a');
+      link.href = pdfUrl;
+      
+      // Set the download attribute with the filename
+      link.download = 'TinNweAyeResume.pdf';
+      
+      // Append the anchor element to the body
+      document.body.appendChild(link);
+      
+      // Trigger the click event of the anchor element
+      link.click();
+      
+      // Remove the anchor element from the body
+      document.body.removeChild(link);
+  };
+
+
 })()
